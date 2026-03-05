@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コードランダム生成サイト</title>
+
+<style>
+body{
+    font-family:sans-serif;
+    text-align:center;
+    padding:30px;
+}
+
+h2{
+    font-size:30px;
+    margin:30px 0;
+}
+
+button{
+    font-size:22px;
+    padding:15px 30px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>コードランダム生成サイト</h1>
+
+<h2 id="word"></h2>
+<button onclick="generate()">コード生成</button>
+
+<script>
+function generate(){
+    const words = [
+        "F C G Am","Am F G C","F G Em Am","F Em Am G C","C D Em Bm",
+        "C Dm7(omit5) B♭add9 E♭maj7/B♭","C Am G Em","F G/D Em A/E",
+        "Am F G Em","Am Amsus4 G Am","Am Asus2 F Em","B♭ A Dm F","Am G F C",
+        "C C F G","C G Am Em F C F G","Dm Am/C Bm/D G/D Em/B Am Dm/A Em F/C",
+        "C F Dm G","C Am Dm G","Dm7 G7 C","C Gm C7 F"
+    ];
+
+    let num = Math.floor(Math.random() * words.length);
+
+    document.getElementById("word").textContent = words[num];
+}
+</script>
+
+</body>
+</html>
